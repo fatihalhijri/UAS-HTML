@@ -1,0 +1,284 @@
+body{
+    background-color: #000;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+    
+}
+.circle{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: #f9f6ee;
+    position: relative;
+    box-shadow: 0 0 10px #f9f6ee,
+                0 0 40px #f9f6ee,
+                0 0 80px #f9f6ee;
+}
+.circle::after{
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: #000;
+    animation: eclipse 3s linear infinite alternate;
+}
+
+@keyframes eclipse{
+    0%{
+        transform: translate(-50px,50px)
+        scale(0.9);
+    }
+    50%,75%{
+        transform: translate(0px,0px)
+        scale(1.02);
+        box-shadow: 0 0 10px #f9f3f2,
+                    0 0 80px 8px #c79388;
+    }
+    100%{
+        transform: translate(50px,-50px)
+        scale(0.9);
+        box-shadow:none;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+.top-nav {
+
+    position: fixed;
+  
+    width: 100%;
+  
+    padding: 10px 10px 5px;
+  
+    display: flex;
+  
+    justify-content: space-between;
+  
+    align-items: center;
+  
+    flex-wrap: wrap;
+  
+    transition: top 0.75s ease-in;
+  
+    background: linear-gradient(#aeaeae,#111111);
+    border-bottom-right-radius: 10% ;
+    border-bottom-left-radius: 10% ;
+    
+    top: 0;
+  
+  }
+  
+  .top-nav .menu {
+  
+    list-style: none;
+  
+    overflow: hidden;
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: flex-start;
+  
+    width: 100%;
+  
+    max-height: 0;
+  
+    transition: max-height 0.2s ease-out;
+  
+  }
+  img{
+    width: 50px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    
+
+  }
+  
+  .top-nav .menu li a {
+  
+    display: inline-block;
+  
+    min-width: 75px;
+  
+    margin: 0.3em 0;
+  
+    padding: 0 10px;
+  
+    transition: 1s all;
+  
+    text-decoration: none;
+  
+    font-size: 20px;
+  
+  }
+  
+  .top-nav .menu li a:link, .top-nav .menu li a:visited {
+  
+    color: #e8e8e8;
+  
+  }
+  
+  .top-nav .menu li a:focus, .top-nav .menu li a:hover, .top-nav .menu li a:active {
+  
+    transform: scale(1.1) rotate(-2deg);
+  
+    color: #20232d;
+  
+  }
+  
+  .top-nav .logo {
+  
+    display: inline-block;
+  
+    width: 150px;
+  
+  }
+  
+  .top-nav .menu-icon {
+  
+    cursor: pointer;
+  
+    display: inline-block;
+  
+    padding: 28px 20px;
+  
+  }
+  
+  .top-nav .menu-icon .navicon {
+  
+    background: #20232d;
+  
+    display: block;
+  
+    height: 2px;
+  
+    position: relative;
+  
+    width: 1.625rem;
+  
+  }
+  
+  .top-nav .menu-icon .navicon:before, .top-nav .menu-icon .navicon:after {
+  
+    background: #20232d;
+  
+    content: "";
+  
+    display: block;
+  
+    height: 100%;
+  
+    position: absolute;
+  
+    transition: all 0.2s ease-out;
+  
+    width: 100%;
+  
+  }
+  
+  .top-nav .menu-icon .navicon:before {
+  
+    top: 7px;
+  
+  }
+  
+  .top-nav .menu-icon .navicon:after {
+  
+    top: -7px;
+  
+  }
+  
+  .top-nav .menu-btn {
+  
+    display: none;
+  
+  }
+  
+  .top-nav .menu-btn:checked ~ .menu {
+  
+    max-height: 300px;
+  
+  }
+  
+  .top-nav .menu-btn:checked ~ .menu-icon .navicon {
+  
+    background: transparent;
+  
+  }
+  
+  .top-nav .menu-btn:checked ~ .menu-icon .navicon:before {
+  
+    transform: rotate(-45deg);
+  
+  }
+  
+  .top-nav .menu-btn:checked ~ .menu-icon .navicon:after {
+  
+    transform: rotate(45deg);
+  
+  }
+  
+  .top-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before, .top-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  
+    top: 0;
+  
+  }
+  
+  @media (min-width: 840px) {
+  
+    .top-nav li {
+  
+      margin: 0 10px;
+  
+    }
+  
+    .top-nav .menu {
+  
+      width: auto;
+  
+      max-height: none;
+  
+      flex-direction: row;
+  
+    }
+  
+    .top-nav .menu-icon {
+  
+      display: none;
+  
+    }
+  
+  }
+  
+  *,
+  
+  html {
+  
+    margin: 0;
+  
+    padding: 0;
+  
+    box-sizing: border-box;
+  
+    font-size: 16px;
+  
+    scroll-behavior: smooth;
+    
+
+  }
+  h2{
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+    color: #e8e8e8;
+
+  }
+  p{
+    text-align: left;
+    font-size: 30px;
+    color: #e8e8e8;
+  }
