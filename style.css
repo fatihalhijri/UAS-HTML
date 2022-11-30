@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
 body{
     background-color: #000;
     height: 50vh;
     display: grid;
     place-items: center;
+    font-family: 'Kalam', cursive;
+    text-align: justify;
+    
     
 }
 .circle{
@@ -126,7 +131,7 @@ body{
   
     transform: scale(1.1) rotate(-2deg);
   
-    color: #20232d;
+    color: #f2c614;
   
   }
   
@@ -271,14 +276,24 @@ body{
 
   }
   h2{
-    text-align: left;
+    text-align: center;
     font-size: 30px;
     font-weight: bold;
     color: #e8e8e8;
 
   }
   p{
-    text-align: left;
+    text-align: center;
     font-size: 30px;
     color: #e8e8e8;
+  }
+  h3,h4,h4,footer{
+    text-align: center;
+    font-size: 30px;
+    color: #e8e8e8;
+    font-weight: bold;
+  }
+  hr{
+    color: white;
+    justify-items: flex-end;
   }
