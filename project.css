@@ -5,6 +5,11 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+    
+}
+
 header {
     height: 70px;
     
@@ -16,6 +21,7 @@ header h1 {
     padding: 15px 24px;
     text-transform: uppercase;
 }
+
 header h1 a{
     transition: .25s;
 }
@@ -46,6 +52,7 @@ a{
 }
 .container{
     width: 90%;
+   justify-content: center;
     margin: 0 auto;
     
 }
@@ -53,6 +60,7 @@ a{
     content: "";
     display: block;
     clear: both;
+    
 }
 .mobile-menu{
     float: right;
@@ -74,6 +82,7 @@ a{
     left: -300px;
     width: 300px;
     background-color: rgba(16, 47, 89, .9);
+    
 }
 .sidebar ul li a {
     color: #fff ;
@@ -97,6 +106,7 @@ a{
 }
 section{
     padding: 80px 0;
+    
 }
 .banner img {
     width: 180px;
@@ -188,6 +198,7 @@ section h3::after{
     display:inline-block ;
     text-align: center;
     color: #fff;
+    
 }
 .java{
     height: 30px;
@@ -233,7 +244,7 @@ transform: scale(1.2);
     margin-bottom:15px; 
 }
 footer{
-    background-color: #333;
+    background: linear-gradient(#aeaeae,#111111);
     padding: 30px;
     text-align: center;
 }

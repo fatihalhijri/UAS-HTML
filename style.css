@@ -198,10 +198,11 @@ body{
   }
   
   .top-nav .menu-btn {
-  
+    
     display: none;
-  
+    
   }
+  
   
   .top-nav .menu-btn:checked ~ .menu {
   
